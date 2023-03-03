@@ -24,12 +24,13 @@ const App=()=>{
    <ul>
 {
     data.filter(data=>data.bloodGroup.includes(search)).map((eachItem)=>{
-    const {id,name,bloodGroup,phone}=eachItem
+    const {id,name,bloodGroup,phone,location}=eachItem
     return(
         <li key={id}>
             <h1 className="head-one">{name}</h1>
             <p className="para-one">{bloodGroup}</p>
             <p className="para-two">{phone}</p>
+            <p className="location">{location}</p>
         </li>
     )
     })
